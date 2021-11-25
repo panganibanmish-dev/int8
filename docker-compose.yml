@@ -1,0 +1,41 @@
+version: "3.5"
+
+services:
+  int1-app:
+    build:
+      context: '.'
+      args:
+        uid: 1000
+    container_name: int1-app
+    environment:
+      - APACHE_RUN_USER=#1000
+      - APACHE_RUN_GROUP=#1000
+    volumes:
+      - .:/var/www/html/public
+    ports:
+      - 8080:80
+    networks:
+      backend:
+        aliases:
+          - int1-app
+
+  maestro-db:
+    image: mysql:5.7.6
+    container_name: int1-db
+    restart: always
+    ports:
+      - 3306:3306
+    volumes:
+      - ./.int1-data/database:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=int1devh_ci
+      - MYSQL_USER=ruffy
+      - MYSQL_PASSWORD=password
+    networks:
+      backend:
+        aliases:
+          - int1-db
+
+networks:
+  backend:

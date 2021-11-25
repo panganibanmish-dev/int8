@@ -1,0 +1,3 @@
+
+select Lots, Stage, Individual_Names FROM Deals WHERE Individual_Names is not null AND Stage != 'Settled' LIMIT 12,10
+select Lots, Stage, Individual_Names FROM Deals WHERE Individual_Names is not null AND Stage != 'Settled' LIMIT 13,10

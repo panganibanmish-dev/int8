@@ -1,0 +1,59 @@
+.login-page, .register-page {
+    background: #fff;
+}
+.login-box{
+    width: 400px;
+    margin: 7% auto;
+}
+.register-box{
+	width: 520px;
+    margin: 7% auto;
+}
+.login-box-body{
+    background: #dae8ec;
+    padding: 30px;
+    display: inline-block;
+    width: 100%;
+}
+.register-box-body {
+    background: #dae8ec;
+}
+.login-box-msg{
+	text-transform: uppercase;
+	font-size: 20px;
+	color: #000;
+}
+.logolandhub{
+	width: 300px;
+}
+.logointegra{
+	width: 300px;
+}
+.loginbtn{
+	background: #000318;
+    border-color: #000318;
+    text-transform: uppercase;
+}
+.loginbtn:hover{
+	background: #000318;
+    border-color: #000318;
+}
+.forgotpasword_singup_main{
+	margin-top: 20px;
+}
+.forgotpasword_singup_main span{
+	color: #000;
+}
+.forgotpasword_singup_main a{
+	color: #000;
+	text-decoration: underline;
+}
+.signupbtn{
+	background: #000318;
+    border-color: #000318;
+    text-transform: uppercase;
+}
+.signupbtn:hover{
+	background: #000318;
+    border-color: #000318;
+}

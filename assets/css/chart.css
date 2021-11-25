@@ -1,0 +1,152 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+.donut {
+  
+  --donut-border-width: 0px;
+  --donut-spacing: 0;
+  --donut-spacing-color: 255, 255, 255;
+  --donut-spacing-deg: calc(1deg * var(--donut-spacing));
+  border-radius: 50%;
+  height: var(--donut-size);
+  position: relative;
+  width: var(--donut-size);
+}
+
+.donut__label {
+  left: 50%;
+  line-height: 1.5;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 80%;
+}
+
+
+
+.donut__slice {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.donut__slice .chartbefore,
+.donut__slice .chartafter,
+.donut__slice i {
+  border: var(--donut-border-width) solid rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 100%;
+}
+.donut__slice i.chartIcon{
+  border-top: solid 3px transparent;
+  text-align: center;
+  z-index: 999;
+}
+.donut__slice i.chartIcon img{
+  width: 20px;
+}
+.donut__slice::before {
+  border-width: calc(var(--donut-border-width) + 1px);
+  box-shadow: 0 0 1px 0 rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
+}
+
+.donut__slice__first {
+  --first-start: 0;
+}
+
+
+.donut__slice__first .chartbefore {
+  border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
+  -webkit-transform: rotate(calc(360deg * var(--first-start) + 45deg));
+          transform: rotate(calc(360deg * var(--first-start) + 45deg));
+}
+.donut__slice__first .chartafter {
+  border-top-color: #ff6838;
+  border-right-color: rgba(255, 104, 56, calc(100 * (var(--first) - .25)));
+  border-bottom-color: rgba(255, 104, 56, calc(100 * (var(--first) - .5)));
+  border-left-color: rgba(255, 104, 56, calc(100 * (var(--first) - .75)));
+  -webkit-transform: rotate(calc(360deg * var(--first-start) + 45deg + var(--donut-spacing-deg)));
+          transform: rotate(calc(360deg * var(--first-start) + 45deg + var(--donut-spacing-deg)));
+}
+
+
+.donut__slice__second {
+  --second-start: calc(var(--first));
+  --second-check: max(calc(var(--second-start) - .5), 0);
+  -webkit-clip-path: inset(0 calc(50% * (var(--second-check) / var(--second-check))) 0 0);
+          clip-path: inset(0 calc(50% * (var(--second-check) / var(--second-check))) 0 0);
+}
+.donut__slice__second .chartbefore {
+  border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
+  -webkit-transform: rotate(calc(360deg * var(--second-start) + 45deg + var(--donut-spacing-deg)));
+          transform: rotate(calc(360deg * var(--second-start) + 45deg + var(--donut-spacing-deg)));
+}
+.donut__slice__second .chartafter {
+  border-top-color: #ffc820;
+  border-right-color: rgba(255, 200, 32, calc(100 * (var(--second) - .25)));
+  border-bottom-color: rgba(255, 200, 32, calc(100 * (var(--second) - .5)));
+  border-left-color: rgba(255, 200, 32, calc(100 * (var(--second) - .75)));
+  -webkit-transform: rotate(calc(360deg * var(--second-start) + 45deg + var(--donut-spacing-deg)));
+  transform: rotate(calc(360deg * var(--second-start) + 45deg + var(--donut-spacing-deg)));
+}
+
+.donut__slice__third {
+  --third-start: calc(var(--first) + var(--second));
+  --third-check: max(calc(var(--third-start) - .5), 0);
+  -webkit-clip-path: inset(0 calc(50% * (var(--third-check) / var(--third-check))) 0 0);
+          clip-path: inset(0 calc(50% * (var(--third-check) / var(--third-check))) 0 0);
+}
+.donut__slice__third:before{
+}
+.donut__slice__third .chartbefore {
+  border-top-color: rgba(var(--donut-spacing-color), calc(100 * var(--donut-spacing)));
+  -webkit-transform: rotate(calc(360deg * var(--third-start) + 45deg));
+          transform: rotate(calc(360deg * var(--third-start) + 45deg));
+}
+.donut__slice__third .chartafter {
+  border-top-color: #97c95c;
+  border-right-color: rgba(151, 201, 92, calc(100 * (var(--third) - .25)));
+  border-bottom-color: rgba(151, 201, 92, calc(100 * (var(--third) - .5)));
+  border-left-color: rgba(151, 201, 92, calc(100 * (var(--third) - .75)));
+  -webkit-transform: rotate(calc(360deg * var(--third-start) + 45deg + var(--donut-spacing-deg)));
+          transform: rotate(calc(360deg * var(--third-start) + 45deg + var(--donut-spacing-deg)));
+}
+
+
+
+
+.donut__slice__first i.chartIcon{
+  -webkit-transform: rotate(calc(360deg * var(--first-start) + 45deg + var(--donut-spacing-deg)));
+          transform: rotate(calc(360deg * var(--first-start) + 45deg + var(--donut-spacing-deg)));
+}
+.donut__slice__first i.chartIcon img{
+  -webkit-transform: rotate(calc(-360deg * var(--first-start) - 45deg - var(--donut-spacing-deg)));
+  transform: rotate(calc(-360deg * var(--first-start) - 45deg - var(--donut-spacing-deg)));
+}
+.donut__slice__second i.chartIcon{
+  -webkit-transform: rotate(calc(360deg * var(--second-start) + 45deg + var(--donut-spacing-deg)));
+          transform: rotate(calc(360deg * var(--second-start) + 45deg + var(--donut-spacing-deg)));
+}
+.donut__slice__second i.chartIcon img{
+  -webkit-transform: rotate(calc(-360deg * var(--second-start) - 45deg - var(--donut-spacing-deg)));
+          transform: rotate(calc(-360deg * var(--second-start) - 45deg - var(--donut-spacing-deg)));
+}
+.donut__slice__third i.chartIcon{
+  -webkit-transform: rotate(calc(360deg * var(--third-start) + 45deg));
+          transform: rotate(calc(360deg * var(--third-start) + 45deg));
+}
+.donut__slice__third i.chartIcon img{
+  -webkit-transform: rotate(calc(-360deg * var(--third-start) - 45deg));
+          transform: rotate(calc(-360deg * var(--third-start) - 45deg));
+}
+

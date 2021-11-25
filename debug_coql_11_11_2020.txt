@@ -1,0 +1,190 @@
+
+select Lots, Stage, Individual_Names FROM Deals WHERE Individual_Names is not null AND Stage != 'Settled' LIMIT 0,10
+stdClass Object
+(
+    [data] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [Lots] => Ballymanus 19P Lot 525
+                    [Stage] => Deposit Paid
+                    [id] => 12710000000723960
+                    [Individual_Names] => Christopher Graeme Missen
+                )
+
+            [1] => stdClass Object
+                (
+                    [Lots] => Ballymanus 19P Lot 526
+                    [Stage] => Deposit Paid
+                    [id] => 12710000000723961
+                    [Individual_Names] => Annabel Pickersgill
+                )
+
+            [2] => stdClass Object
+                (
+                    [Lots] => Ballymanus 19P Lot 527
+                    [Stage] => Deposit Paid
+                    [id] => 12710000000723962
+                    [Individual_Names] => Claire Trevenen
+                )
+
+            [3] => stdClass Object
+                (
+                    [Lots] => Ballymanus 19P Lot 528
+                    [Stage] => Deposit Paid
+                    [id] => 12710000000723963
+                    [Individual_Names] => Nathan Demeye
+                )
+
+            [4] => stdClass Object
+                (
+                    [Lots] => Ballymanus 19P Lot 529
+                    [Stage] => Deposit Paid
+                    [id] => 12710000000723964
+                    [Individual_Names] => Nicholas Roy Bishop
+                )
+
+            [5] => stdClass Object
+                (
+                    [Lots] => Ballymanus 19P Lot 530
+                    [Stage] => Deposit Paid
+                    [id] => 12710000000723965
+                    [Individual_Names] => Carlie Jane McKimm
+                )
+
+            [6] => stdClass Object
+                (
+                    [Lots] => Ballymanus 19P Lot 531
+                    [Stage] => Deposit Paid
+                    [id] => 12710000000723966
+                    [Individual_Names] => Ian Clark
+                )
+
+            [7] => stdClass Object
+                (
+                    [Lots] => Ballymanus 19P Lot 532
+                    [Stage] => Opportunity Lost
+                    [id] => 12710000000723967
+                    [Individual_Names] => Nicholas James Frichot
+                )
+
+            [8] => stdClass Object
+                (
+                    [Lots] => Ballymanus 19P Lot 533
+                    [Stage] => Deposit Paid
+                    [id] => 12710000000723968
+                    [Individual_Names] => Sajel Kamlesh Kotak
+                )
+
+            [9] => stdClass Object
+                (
+                    [Lots] => Ballymanus 19P Lot 534
+                    [Stage] => Deposit Paid
+                    [id] => 12710000000723969
+                    [Individual_Names] => Savinandita Rajesh Gupta
+                )
+
+        )
+
+    [info] => stdClass Object
+        (
+            [count] => 10
+            [more_records] => 1
+        )
+
+)
+
+select Lots, Stage, Individual_Names FROM Deals WHERE Individual_Names is not null AND Stage != 'Settled' LIMIT 10,10
+stdClass Object
+(
+    [data] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [Lots] => Ballymanus 19P Lot 535
+                    [Stage] => Deposit Paid
+                    [id] => 12710000000723970
+                    [Individual_Names] => Jesse-Damon Manton
+                )
+
+            [1] => stdClass Object
+                (
+                    [Lots] => Ballymanus 19P Lot 536
+                    [Stage] => Deposit Paid
+                    [id] => 12710000000723971
+                    [Individual_Names] => Paul Michael Griffiths
+                )
+
+            [2] => stdClass Object
+                (
+                    [Lots] => Ballymanus 19P Lot 537
+                    [Stage] => Deposit Paid
+                    [id] => 12710000000723972
+                    [Individual_Names] => Ross Andrew Silvey
+                )
+
+            [3] => stdClass Object
+                (
+                    [Lots] => Ballymanus 19P Lot 541
+                    [Stage] => Deposit Paid
+                    [id] => 12710000000723976
+                    [Individual_Names] => Soheil Yaghobiabkenari
+                )
+
+            [4] => stdClass Object
+                (
+                    [Lots] => Ballymanus 19P Lot 542
+                    [Stage] => Deposit Paid
+                    [id] => 12710000000723977
+                    [Individual_Names] => Alexander Fitzsimons
+                )
+
+            [5] => stdClass Object
+                (
+                    [Lots] => Ballymanus 19P Lot 543
+                    [Stage] => Contract Signed
+                    [id] => 12710000000723978
+                    [Individual_Names] => Parkinvest Pty Ltd
+                )
+
+            [6] => stdClass Object
+                (
+                    [Lots] => Ballymanus 19P Lot 545
+                    [Stage] => Deposit Paid
+                    [id] => 12710000000723980
+                    [Individual_Names] => Tracey Williams
+                )
+
+            [7] => stdClass Object
+                (
+                    [Lots] => Ballymanus 19P Lot 546
+                    [Stage] => Deposit Paid
+                    [id] => 12710000000723981
+                    [Individual_Names] => Laura Challans
+                )
+
+            [8] => stdClass Object
+                (
+                    [Lots] => Ballymanus 19P Lot 547
+                    [Stage] => Deposit Paid
+                    [id] => 12710000000723982
+                    [Individual_Names] => Leonard Arnold
+                )
+
+            [9] => stdClass Object
+                (
+                    [Lots] => Ballymanus 19P Lot 548
+                    [Stage] => Deposit Paid
+                    [id] => 12710000000723983
+                    [Individual_Names] => Paul Andrew Dalton
+                )
+
+        )
+
+    [info] => stdClass Object
+        (
+            [count] => 10
+            [more_records] => 1
+        )
+
+)
